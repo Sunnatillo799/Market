@@ -1,0 +1,19 @@
+package uz.pdp.market.dto.auth;
+
+import lombok.*;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class AuthUserUpdateDto {
+    private Long id;
+    private String username;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
+    private Long language_id;
+    private Long role_id;
+}

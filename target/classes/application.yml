@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    password: sunnatillo5799
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/market
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+api:
+  info:
+    title: Market
+    description: This is the Market API
+    version: 1.0
+    terms-of-service: https://market.uz
+    contact-name: market.uz
+    contact-email: sunnatillosulxonov@gmail.com
+    contact-url: https://market.uz
+    license-name: Apache 2.0
+    license-url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+
+service:
+  prop:
+    protocol: http
+    ip: localhost
+    port: 8080
+    url: boom.uz
+
+
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+  api-docs:
+    path: /api-docs
+
+
+

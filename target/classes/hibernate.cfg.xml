@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/market</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">sunnatillo5799</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <mapping class="uz.pdp.market.entity.customer.Customer"/>
+        <mapping class="uz.pdp.market.entity.payment.Payment"/>
+        <mapping class="uz.pdp.market.entity.permission.Permission"/>
+        <mapping class="uz.pdp.market.entity.product.Product"/>
+        <mapping class="uz.pdp.market.entity.role.Role"/>
+        <mapping class="uz.pdp.market.entity.sales.Sales"/>
+        <mapping class="uz.pdp.market.entity.stores.Stores"/>
+        <mapping class="uz.pdp.market.entity.auth.AuthUser"/>
+    </session-factory>
+</hibernate-configuration>
