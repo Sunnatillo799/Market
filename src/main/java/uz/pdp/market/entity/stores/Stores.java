@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import uz.pdp.market.entity.base.Auditable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -16,7 +17,12 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "stores")
 public class Stores extends Auditable {
+
+    @Column(nullable = false)
     private String name;
+
     private String description;
+
+    @Column(nullable = false)
     private String type;
 }

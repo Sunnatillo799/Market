@@ -8,7 +8,10 @@ import uz.pdp.market.dto.GenericDto;
 
 @Getter
 @Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class StoresUpdateDto extends GenericDto {
+    private String name;
+    private String description;
+    private String type;
 }

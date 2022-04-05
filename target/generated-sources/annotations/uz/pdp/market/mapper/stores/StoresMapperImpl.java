@@ -11,7 +11,7 @@ import uz.pdp.market.entity.stores.Stores;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:27+0500",
+    date = "2022-04-05T12:02:13+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -50,6 +50,10 @@ public class StoresMapperImpl implements StoresMapper {
 
         Stores stores = new Stores();
 
+        stores.setName( storesCreateDto.getName() );
+        stores.setDescription( storesCreateDto.getDescription() );
+        stores.setType( storesCreateDto.getType() );
+
         return stores;
     }
 
@@ -62,6 +66,9 @@ public class StoresMapperImpl implements StoresMapper {
         Stores stores = new Stores();
 
         stores.setId( storesUpdateDto.getId() );
+        stores.setName( storesUpdateDto.getName() );
+        stores.setDescription( storesUpdateDto.getDescription() );
+        stores.setType( storesUpdateDto.getType() );
 
         return stores;
     }

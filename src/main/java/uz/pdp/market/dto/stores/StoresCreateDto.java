@@ -1,14 +1,16 @@
 package uz.pdp.market.dto.stores;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import uz.pdp.market.dto.Dto;
+
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class StoresCreateDto implements Dto {
+    private String name;
+    private String description;
+    private String type;
 }

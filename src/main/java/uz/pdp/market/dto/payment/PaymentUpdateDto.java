@@ -8,7 +8,9 @@ import uz.pdp.market.dto.GenericDto;
 
 @Getter
 @Setter
-//@AllArgsConstructor
-//@NoArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class PaymentUpdateDto extends GenericDto {
+    private String amount;
+    private String description;
 }

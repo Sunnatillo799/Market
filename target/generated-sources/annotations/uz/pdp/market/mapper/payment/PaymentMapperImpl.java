@@ -11,7 +11,7 @@ import uz.pdp.market.entity.payment.Payment;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:27+0500",
+    date = "2022-04-05T12:10:21+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -50,6 +50,9 @@ public class PaymentMapperImpl implements PaymentMapper {
 
         Payment payment = new Payment();
 
+        payment.setAmount( paymentCreateDto.getAmount() );
+        payment.setDescription( paymentCreateDto.getDescription() );
+
         return payment;
     }
 
@@ -62,6 +65,8 @@ public class PaymentMapperImpl implements PaymentMapper {
         Payment payment = new Payment();
 
         payment.setId( paymentUpdateDto.getId() );
+        payment.setAmount( paymentUpdateDto.getAmount() );
+        payment.setDescription( paymentUpdateDto.getDescription() );
 
         return payment;
     }

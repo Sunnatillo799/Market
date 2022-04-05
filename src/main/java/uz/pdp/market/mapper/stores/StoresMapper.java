@@ -1,6 +1,7 @@
 package uz.pdp.market.mapper.stores;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.springframework.stereotype.Component;
 import uz.pdp.market.dto.stores.StoresCreateDto;
 import uz.pdp.market.dto.stores.StoresDto;
