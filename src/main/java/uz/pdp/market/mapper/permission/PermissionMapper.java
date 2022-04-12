@@ -20,8 +20,8 @@ public interface PermissionMapper extends BaseMapper<Permission, PermissionDto, 
     List<PermissionDto> toDto(List<Permission> e);
 
     @Override
-    Permission fromCreateDto(PermissionCreateDto permissionCreateDto);
+    Permission fromCreateDto(final PermissionCreateDto permissionCreateDto);
 
     @Override
-    Permission fromUpdateDto(PermissionUpdateDto permissionUpdateDto);
+    Permission fromUpdateDto(final PermissionUpdateDto permissionUpdateDto);
 }

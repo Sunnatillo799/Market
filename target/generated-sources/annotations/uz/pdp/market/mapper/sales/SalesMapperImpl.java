@@ -11,7 +11,7 @@ import uz.pdp.market.entity.sales.Sales;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:27+0500",
+    date = "2022-04-12T10:24:02+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -50,6 +50,10 @@ public class SalesMapperImpl implements SalesMapper {
 
         Sales sales = new Sales();
 
+        sales.setSaleType( salesCreateDto.getSaleType() );
+        sales.setSaleDescription( salesCreateDto.getSaleDescription() );
+        sales.setSaleAmount( salesCreateDto.getSaleAmount() );
+
         return sales;
     }
 
@@ -62,6 +66,9 @@ public class SalesMapperImpl implements SalesMapper {
         Sales sales = new Sales();
 
         sales.setId( salesUpdateDto.getId() );
+        sales.setSaleType( salesUpdateDto.getSaleType() );
+        sales.setSaleDescription( salesUpdateDto.getSaleDescription() );
+        sales.setSaleAmount( salesUpdateDto.getSaleAmount() );
 
         return sales;
     }

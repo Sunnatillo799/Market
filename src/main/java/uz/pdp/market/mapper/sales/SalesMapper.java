@@ -20,8 +20,8 @@ public interface SalesMapper extends BaseMapper<Sales, SalesDto, SalesCreateDto,
     List<SalesDto> toDto(List<Sales> e);
 
     @Override
-    Sales fromCreateDto(SalesCreateDto salesCreateDto);
+    Sales fromCreateDto(final SalesCreateDto salesCreateDto);
 
     @Override
-    Sales fromUpdateDto(SalesUpdateDto salesUpdateDto);
+    Sales fromUpdateDto(final SalesUpdateDto salesUpdateDto);
 }

@@ -27,7 +27,4 @@ public class Product extends Auditable {
 
     private String items;
 
-    @ManyToOne
-    private Customer customer;
-
 }

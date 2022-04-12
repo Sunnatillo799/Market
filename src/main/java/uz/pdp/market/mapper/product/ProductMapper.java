@@ -20,8 +20,8 @@ public interface ProductMapper extends BaseMapper<Product, ProductDto, ProductCr
     List<ProductDto> toDto(List<Product> e);
 
     @Override
-    Product fromCreateDto(ProductCreateDto productCreateDto);
+    Product fromCreateDto(final ProductCreateDto productCreateDto);
 
     @Override
-    Product fromUpdateDto(ProductUpdateDto productUpdateDto);
+    Product fromUpdateDto(final ProductUpdateDto productUpdateDto);
 }

@@ -21,8 +21,8 @@ public interface StoresMapper extends BaseMapper<Stores, StoresDto, StoresCreate
     List<StoresDto> toDto(List<Stores> e);
 
     @Override
-    Stores fromCreateDto(StoresCreateDto storesCreateDto);
+    Stores fromCreateDto(final StoresCreateDto storesCreateDto);
 
     @Override
-    Stores fromUpdateDto(StoresUpdateDto storesUpdateDto);
+    Stores fromUpdateDto(final StoresUpdateDto storesUpdateDto);
 }

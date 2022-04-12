@@ -20,8 +20,8 @@ public interface PaymentMapper extends BaseMapper<Payment, PaymentDto, PaymentCr
     List<PaymentDto> toDto(List<Payment> e);
 
     @Override
-    Payment fromCreateDto(PaymentCreateDto paymentCreateDto);
+    Payment fromCreateDto(final PaymentCreateDto paymentCreateDto);
 
     @Override
-    Payment fromUpdateDto(PaymentUpdateDto paymentUpdateDto);
+    Payment fromUpdateDto(final PaymentUpdateDto paymentUpdateDto);
 }

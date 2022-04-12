@@ -2,7 +2,9 @@ package uz.pdp.market.entity.auth;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
+import uz.pdp.market.entity.fileUpload.FileUpload;
 import uz.pdp.market.entity.language.Language;
+import uz.pdp.market.entity.organization.Organization;
 import uz.pdp.market.entity.role.Role;
 import uz.pdp.market.entity.status.Status;
 import uz.pdp.market.entity.base.Auditable;
@@ -38,7 +40,11 @@ public class AuthUser extends Auditable implements GrantedAuthority {
     private String phone;
 
     @OneToOne
+    @JoinColumn(name = "language_id")
     private Language language;
+
+    @Column(name = "file_id")
+    private Long fileId;
 
     @OneToOne
     @JoinColumn(name = "status_id")
@@ -50,13 +56,17 @@ public class AuthUser extends Auditable implements GrantedAuthority {
     @JoinColumn(name = "role_id")
     private Role role;
 
+    @OneToOne
+    @JoinColumn(name = "organization_id")
+    private Organization organization;
+
     @Override
     public String getAuthority() {
         return role.getName();
     }
 
     @Builder(builderMethodName = "childBuilder")
-    public AuthUser(Long id, Long createdBy, Long updatedBy, LocalDateTime createdAt, LocalDateTime updatedAt, boolean deleted, String username, String password, String firstName, String lastName, String phone, Language language, Role role, Status status, String email) {
+    public AuthUser(Long id, Long createdBy, Long updatedBy, LocalDateTime createdAt, LocalDateTime updatedAt, boolean deleted, String username, String password, String firstName, String lastName, String phone, Language language, Role role, Status status, String email, Long fileId) {
         super(id, createdBy, updatedBy, createdAt, updatedAt, deleted);
         this.username = username;
         this.password = password;
@@ -67,5 +77,6 @@ public class AuthUser extends Auditable implements GrantedAuthority {
         this.role = role;
         this.status = status;
         this.email = email;
+        this.fileId = fileId;
     }
 }

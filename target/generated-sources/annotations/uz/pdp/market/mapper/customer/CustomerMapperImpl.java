@@ -11,7 +11,7 @@ import uz.pdp.market.entity.customer.Customer;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:27+0500",
+    date = "2022-04-12T09:48:57+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -69,6 +69,12 @@ public class CustomerMapperImpl implements CustomerMapper {
         Customer customer = new Customer();
 
         customer.setId( customerUpdateDto.getId() );
+        customer.setName( customerUpdateDto.getName() );
+        customer.setPhone( customerUpdateDto.getPhone() );
+        customer.setEmail( customerUpdateDto.getEmail() );
+        customer.setAddress( customerUpdateDto.getAddress() );
+        customer.setUsername( customerUpdateDto.getUsername() );
+        customer.setPassword( customerUpdateDto.getPassword() );
 
         return customer;
     }

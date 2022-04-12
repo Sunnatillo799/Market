@@ -11,7 +11,6 @@ import uz.pdp.market.dto.Dto;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PaymentCreateDto implements Dto {
-    private Long customerId;
     private String amount;
     private String description;
 

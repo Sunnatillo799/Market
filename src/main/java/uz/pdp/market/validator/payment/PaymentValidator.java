@@ -6,6 +6,7 @@ import uz.pdp.market.dto.payment.PaymentUpdateDto;
 import uz.pdp.market.validator.AbstractValidator;
 
 import javax.xml.bind.ValidationException;
+import java.util.Objects;
 
 @Component
 public class PaymentValidator extends AbstractValidator<PaymentCreateDto, PaymentUpdateDto, Long> {
@@ -23,4 +24,5 @@ public class PaymentValidator extends AbstractValidator<PaymentCreateDto, Paymen
     public void validOnUpdate(PaymentUpdateDto paymentUpdateDto) throws ValidationException {
 
     }
+
 }

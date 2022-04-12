@@ -1,6 +1,6 @@
 package uz.pdp.market.service.customer;
 
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uz.pdp.market.dto.customer.CustomerCreateDto;
@@ -20,7 +20,7 @@ import java.util.Optional;
 @Transactional
 public class CustomerService extends AbstractService<CustomerRepository, CustomerMapper, CustomerValidator> {
 
-    protected CustomerService(CustomerRepository repository, @Qualifier("customerMapperImpl") CustomerMapper mapper, CustomerValidator validator) {
+    protected CustomerService(CustomerRepository repository, CustomerMapper mapper, CustomerValidator validator) {
         super(repository, mapper, validator);
     }
 
@@ -43,6 +43,7 @@ public class CustomerService extends AbstractService<CustomerRepository, Custome
         return byId.orElse(null);
     }
 
+    @CachePut(value = "customer",key = "#id")
     public ResponseEntity<Response> update(Long id, CustomerUpdateDto customerUpdateDto) {
         Optional<Customer> customerOptional = repository.findById(id);
         if (customerOptional.isEmpty()) {
@@ -57,6 +58,9 @@ public class CustomerService extends AbstractService<CustomerRepository, Custome
         customer.setPhone(customerDto.getPhone());
         customer.setPassword(customerDto.getPassword());
         customer.setUsername(customerDto.getUsername());
+
+        repository.save(customer);
+
         return ResponseEntity.ok(new Response("Successfully update", 200));
     }
 

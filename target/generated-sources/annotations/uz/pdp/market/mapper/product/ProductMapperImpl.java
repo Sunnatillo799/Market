@@ -11,7 +11,7 @@ import uz.pdp.market.entity.product.Product;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:27+0500",
+    date = "2022-04-12T10:24:02+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component

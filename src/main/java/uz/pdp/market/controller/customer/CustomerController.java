@@ -30,7 +30,7 @@ public class CustomerController extends AbstractController<CustomerService> {
     }
 
     @RequestMapping(value = PATH + "/customer/update/{id}", method = RequestMethod.PUT)
-    public ResponseEntity<Response> update(@PathVariable Long id, @RequestBody CustomerUpdateDto customerUpdateDto) {
+    public ResponseEntity<Response> update(@PathVariable Long id,@RequestBody CustomerUpdateDto customerUpdateDto) {
         return service.update(id, customerUpdateDto);
     }
 

@@ -11,7 +11,7 @@ import uz.pdp.market.entity.role.Role;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-04T22:48:26+0500",
+    date = "2022-04-12T10:24:02+0500",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -65,6 +65,8 @@ public class RoleMapperImpl implements RoleMapper {
         Role role = new Role();
 
         role.setId( roleUpdateDto.getId() );
+        role.setName( roleUpdateDto.getName() );
+        role.setCode( roleUpdateDto.getCode() );
 
         return role;
     }

@@ -20,8 +20,8 @@ public interface RoleMapper extends BaseMapper<Role, RoleDto, RoleCreateDto, Rol
     List<RoleDto> toDto(List<Role> e);
 
     @Override
-    Role fromCreateDto(RoleCreateDto roleCreateDto);
+    Role fromCreateDto(final RoleCreateDto roleCreateDto);
 
     @Override
-    Role fromUpdateDto(RoleUpdateDto roleUpdateDto);
+    Role fromUpdateDto(final RoleUpdateDto roleUpdateDto);
 }

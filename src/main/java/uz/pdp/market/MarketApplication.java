@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -24,6 +25,7 @@ import uz.pdp.market.repository.auth.AuthUserRepository;
 })
 @OpenAPIDefinition
 @RequiredArgsConstructor
+@EnableCaching
 public class MarketApplication {
     private final AuthUserRepository authuserRepository;
     private final PasswordEncoder passwordEncoder;

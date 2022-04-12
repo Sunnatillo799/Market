@@ -20,8 +20,8 @@ public interface StatusMapper extends BaseMapper<Status, StatusDto, StatusCreate
     List<StatusDto> toDto(List<Status> e);
 
     @Override
-    Status fromCreateDto(StatusCreateDto statusCreateDto);
+    Status fromCreateDto(final StatusCreateDto statusCreateDto);
 
     @Override
-    Status fromUpdateDto(StatusUpdateDto statusUpdateDto);
+    Status fromUpdateDto(final StatusUpdateDto statusUpdateDto);
 }

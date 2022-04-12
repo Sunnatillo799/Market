@@ -9,7 +9,6 @@ import uz.pdp.market.entity.stores.Stores;
 import uz.pdp.market.response.Response;
 import uz.pdp.market.service.stores.StoresService;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController

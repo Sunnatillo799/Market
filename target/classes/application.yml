@@ -11,6 +11,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true
 
 api:
   info:
@@ -38,6 +42,3 @@ springdoc:
     path: swagger-ui
   api-docs:
     path: /api-docs
-
-
-

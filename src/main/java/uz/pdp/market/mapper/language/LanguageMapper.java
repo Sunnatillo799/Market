@@ -20,8 +20,8 @@ public interface LanguageMapper extends BaseMapper<Language, LanguageDto, Langua
     List<LanguageDto> toDto(List<Language> e);
 
     @Override
-    Language fromCreateDto(LanguageCreateDto languageCreateDto);
+    Language fromCreateDto(final LanguageCreateDto languageCreateDto);
 
     @Override
-    Language fromUpdateDto(LanguageUpdateDto languageUpdateDto);
+    Language fromUpdateDto(final LanguageUpdateDto languageUpdateDto);
 }

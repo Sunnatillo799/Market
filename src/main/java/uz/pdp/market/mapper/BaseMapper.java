@@ -7,7 +7,7 @@ public interface BaseMapper<E, D, CD, UD> extends Mapper {
 
     List<D> toDto(List<E> e);
 
-    E fromCreateDto(CD cd);
+    E fromCreateDto(final CD cd);
 
-    E fromUpdateDto(UD ud);
+    E fromUpdateDto(final UD ud);
 }
